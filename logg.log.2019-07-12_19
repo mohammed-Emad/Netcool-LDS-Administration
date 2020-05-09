@@ -1,0 +1,19 @@
+2019-07-12 18:20:47,609 #Name #Email#[(0.004) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2019-07-12 18:20:47.599888' AND "django_session"."session_key" = '4r66f1ix51b75omwqizxm6fwabdfe1lv'); args=('2019-07-12 18:20:47.599888', '4r66f1ix51b75omwqizxm6fwabdfe1lv')]
+2019-07-12 18:20:47,616 #Name #Email#[(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)]
+2019-07-12 18:20:47,623 #Name #Email#[(0.001) SELECT "crud_userprofileinfo"."id", "crud_userprofileinfo"."user_id", "crud_userprofileinfo"."email", "crud_userprofileinfo"."position" FROM "crud_userprofileinfo" WHERE "crud_userprofileinfo"."id" = 2; args=(2,)]
+2019-07-12 18:22:09,973 #Name #Email#[(0.019) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2019-07-12 18:22:09.949434' AND "django_session"."session_key" = '4r66f1ix51b75omwqizxm6fwabdfe1lv'); args=('2019-07-12 18:22:09.949434', '4r66f1ix51b75omwqizxm6fwabdfe1lv')]
+2019-07-12 18:22:09,999 #Name #Email#[(0.001) SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 2; args=(2,)]
+2019-07-12 18:22:10,008 #Name #Email#[(0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE "django_session"."session_key" = '4r66f1ix51b75omwqizxm6fwabdfe1lv'; args=('4r66f1ix51b75omwqizxm6fwabdfe1lv',)]
+2019-07-12 18:22:10,010 #Name #Email#[(0.000) BEGIN; args=None]
+2019-07-12 18:22:10,014 #Name #Email#[(0.001) DELETE FROM "django_session" WHERE "django_session"."session_key" IN ('4r66f1ix51b75omwqizxm6fwabdfe1lv'); args=('4r66f1ix51b75omwqizxm6fwabdfe1lv',)]
+2019-07-12 18:22:17,136 #Name #Email#[(0.008) SELECT "django_site"."id", "django_site"."domain", "django_site"."name" FROM "django_site" WHERE "django_site"."id" = 1; args=(1,)]
+2019-07-12 19:00:47,794 #Name #Email#[(0.130) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None]
+2019-07-12 19:00:47,928 #Name #Email#[(0.037) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()]
+2019-07-12 19:02:41,827 #Name #Email#[(0.010) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None]
+2019-07-12 19:02:41,841 #Name #Email#[(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()]
