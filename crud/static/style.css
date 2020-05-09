@@ -1,0 +1,151 @@
+body {
+    font-family: 'Oxygen', sans-serif;
+    background-color: #D8D8D8;
+}
+
+.base {
+    background-color: #fff;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.42);
+    padding: 0;
+}
+
+.padded {
+    margin-top : 30px;
+    margin-bottom: 30px;
+}
+
+.page-header {
+    background-color: #CECEF6;
+    margin-top: 20px;
+    padding: 20px 20px 20px 40px;
+}
+
+.page-header h2, .page-header h2 a, .page-header h2 a:visited, .page-header h2 a:active {
+    color: #000;
+    font-size: 28pt;
+    text-decoration: none;
+}
+
+.sub-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0375B4;
+    margin-top: 5px;
+    padding: 10px 10px 10px 40px;
+}
+
+.sub-header h3 {
+    color: #fff;
+    font-size: 14pt;
+}
+
+.sub-header-title {
+    font-size: 18pt;
+    color: #fff;
+}
+
+.page-footer {
+    background-color: #262228;
+    margin-bottom: 20px;
+    padding: 10px;
+    display: inline-block;
+    width: 100%;
+}
+
+.page-footer div {
+    color: #fff;
+    font-size: 10pt;
+    text-align: center;
+}
+
+.save {
+    float: right;
+}
+
+ul.card-base {
+    display: inline-block;
+}
+
+ul.card-base li {
+    float: left;
+    list-style: outside none none;
+    width: 30%;
+}
+
+.card {
+    background-color: #FFCE00;
+    margin: 10px;
+}
+
+.card-title {
+    background-color: #000;
+    margin: 0;
+    margin-top: 5px;
+    padding: 5px 0 5px 20px;
+    width: 100%;
+    font-size: 16px;
+    color: #fff;
+}
+
+.card-body {
+    color: #000;
+    padding: 0;
+}
+
+.btn-link {
+    color: #fff;
+}
+
+.btn-link:hover {
+    color: #FFCE00;
+}
+
+ul.entry {
+    display: block;
+    padding-left: 0;
+}
+
+ul.entry li {
+    float: none;
+    list-style: none;
+    padding-left: 10px;
+    width: 100%;
+    font-size: 12px;
+}
+
+.entry {
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.entry-base {
+    display: flex;
+    margin-top: 5px;
+    width: 100%;
+    background-color: #007849;
+    color: #fff;
+    padding: 10px;
+}
+
+.entry-title {
+    padding-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.card-button-panel {
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.btn-entry {
+    color: #FFCE00;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+}
+.table{ 
+    margin: 0px auto;
+}
