@@ -15,17 +15,15 @@ The system is managed by many administrators,
 - New users can be added only through the responsible user
 
 - All users can add new devices either individually or through a csv file
-They can add filters and connect them to different devices.
-They can also use a search engine to search within devices or filters in the database
-... and only some users can edit the previously added devices.
+- They can add filters and connect them to different devices.
+- They can also use a search engine to search within devices or filters in the database
+- and only some users can edit the previously added devices.
+- The application log and all commands that address the database are saved directly, and only officials can view this data.
 
-The application log and all commands that address the database are saved directly, and only officials can view this data.
+- Here are some other details..
 
-Here are some other details..
-
-1- The login screen integrated with LDAP and setting permissions for a few people can see all APP options and track records.
-
-..The first screen of the application is "Sign in", which accesses this screen must be informed of the login (must be via LDAP) and then the password of the login.
+1-The login screen integrated with LDAP and setting permissions for a few people can see all APP options and track records.
+- The first screen of the application is "Sign in", which accesses this screen must be informed of the login (must be via LDAP) and then the password of the login.
 
 2- Not all users can obtain the same privileges (permissions) to perform tasks in the application. For this reason, we do have powers to grant or remove user permissions in order to delete, add or change devices or filters.
 
