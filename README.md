@@ -105,3 +105,33 @@ AUTH_LDAP_USER_SEARCH = LDAPSearchUnion(
     LDAPSearch("ou=otherusers,dc=example,dc=com", ldap.SCOPE_SUBTREE, "(uid=%(user)s)"),
 )
 ```
+
+#Some advice 
+- Some problems occur when working with tables inside IBM-DB2 databases
+- So we will use the next solution to address it
+
+
+```python
+class Meta:
+      managed = False
+      db_table = 'Name_Table!'
+```
+
+-An example of a complete table adapted from the project itself is [here](https://github.com/mohammed-Emad/Netcool-LDS-Administration/blob/41f2f596bf6949aaba636103c7c25dca60c1d32b/crud/models.py#L17)
+
+```python
+# Create your models here.
+class UserProfileInfo(models.Model):
+      user = models.OneToOneField(User,on_delete=models.CASCADE)
+      email = models.EmailField(max_length=255, unique=True)
+      position = models.CharField(max_length=18, choices=manger_choices ,default='normal')
+      def __str__(self):
+          return self.user.username
+
+      class Meta:
+        managed = False
+        db_table = 'DJANGOUSER'
+```
+```python3
+>>>None!=me
+```
