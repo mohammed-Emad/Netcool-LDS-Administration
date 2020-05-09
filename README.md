@@ -1,6 +1,6 @@
 # Netcool LDS Administration
 
-#install IBM-DB2 in Ubuntu[[Go](http://www.techienote.com/how-to-download-and-install-ibm-db2-database-on-ubuntu/)] Or Centos[[GO](https://blog.toadworld.com/2017/08/11/how-to-install-ibm-db2-developer-edition-on-centos-7-using-docker)]
+# install IBM-DB2 in Ubuntu[[Go](http://www.techienote.com/how-to-download-and-install-ibm-db2-database-on-ubuntu/)] Or Centos[[GO](https://blog.toadworld.com/2017/08/11/how-to-install-ibm-db2-developer-edition-on-centos-7-using-docker)]
 
 ![search](./result/get_lds.png)
 
@@ -29,13 +29,13 @@ The system is managed by many administrators,
 
 3 - If the user types "EMEA", the database will receive the code "ige", but this option needs to do the following: If the user types "EMEA" and the device name contains the characters ".ahe". In the "FQDN" field, the code that will be sent to the database will be "ehe", but if it does not contain these characters, the symbol will continue to "ige"
 
-#Crate Database..
+# Crate Database..
 ```shell
 #su - db2inst1 #db2inst1 vs your user
 $db2 CREATE DATABASE GSMALDS
 $db2 connect to gsmalds
 ```
-#Crate Tables..
+# Crate Tables..
 
 ```shell
 $ db2 "CREATE TABLE RIDALIAS (ID INTEGER(4) NOT NULL ,
@@ -74,7 +74,7 @@ $ db2 "CREATE TABLE AUTOMATIONFILTERS (ID INTEGER(4) NOT NULL ,
 
 ```
 
-#install python &Tools |LIB
+# install python &Tools |LIB
 
 ```bash
 pip3 install ibm_db==2.0.8a
@@ -84,18 +84,19 @@ pip3 install pandas
 pip3 install pycrypto
 ```
 
-#Run
+# Run migrate app
 ```shell
 $python3 manage.py migrate
 #This creates the tables we want and in the correct format within the database
 ```
+# Run Server
 ```shell
 $python3 manage.py runserver
 ```
 
 
 
-#use LDAPSearch 
+# example of using LDAPSearch 
 ```python
 import ldap
 from django_auth_ldap.config import LDAPSearch, LDAPSearchUnion
@@ -106,7 +107,7 @@ AUTH_LDAP_USER_SEARCH = LDAPSearchUnion(
 )
 ```
 
-#Some advice 
+# Some advice 
 - Some problems occur when working with tables inside IBM-DB2 databases
 - So we will use the next solution to address it
 
