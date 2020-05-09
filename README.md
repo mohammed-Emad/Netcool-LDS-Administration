@@ -6,6 +6,31 @@
 
 ![login](./result/login3.png)
 
+We need to clarify what the application does.
+- In general, the system is for managing devices connected over the network based on their mail addresses
+The system is managed by many administrators,
+- Administrators are divided into groups of users, each with different powers than the other group.
+- Encrypt database passwords and ldap.
+
+- New users can be added only through the responsible user
+
+- All users can add new devices either individually or through a csv file
+They can add filters and connect them to different devices.
+They can also use a search engine to search within devices or filters in the database
+... and only some users can edit the previously added devices.
+
+The application log and all commands that address the database are saved directly, and only officials can view this data.
+
+Here are some other details..
+
+1- The login screen integrated with LDAP and setting permissions for a few people can see all APP options and track records.
+
+..The first screen of the application is "Sign in", which accesses this screen must be informed of the login (must be via LDAP) and then the password of the login.
+
+2- Not all users can obtain the same privileges (permissions) to perform tasks in the application. For this reason, we do have powers to grant or remove user permissions in order to delete, add or change devices or filters.
+
+3 - If the user types "EMEA", the database will receive the code "ige", but this option needs to do the following: If the user types "EMEA" and the device name contains the characters ".ahe". In the "FQDN" field, the code that will be sent to the database will be "ehe", but if it does not contain these characters, the symbol will continue to "ige"
+
 #Crate Database..
 ```shell
 #su - db2inst1 #db2inst1 vs your user
