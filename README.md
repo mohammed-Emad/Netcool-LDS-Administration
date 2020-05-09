@@ -2,6 +2,8 @@
 
 #install imb-db2 in Ubuntu[[Go](http://www.techienote.com/how-to-download-and-install-ibm-db2-database-on-ubuntu/)] Or Centos[[GO](https://blog.toadworld.com/2017/08/11/how-to-install-ibm-db2-developer-edition-on-centos-7-using-docker)]
 
+![SMPL-X Examples](./images/teaser_fig.png)
+
 #Crate Database..
 ```shell
 #su - db2inst1 #db2inst1 vs your user
