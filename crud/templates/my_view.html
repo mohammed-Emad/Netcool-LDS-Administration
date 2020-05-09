@@ -1,0 +1,59 @@
+{% extends 'form.html' %}
+
+{% block title %}
+Add Multiple Device
+{% endblock %}
+
+{% block subtitle %}
+    <div class="sub-header-title">Add Multiple LDSs (device)</div>
+    <a href="{% url 'home' %}" class="btn btn-link btn-sm">Home</a>
+{% endblock %}
+{% if messages %}
+  <ul class="messages">
+    {% for message in messages %}
+      <li class="{{ message.tags }}">{{ message }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+
+
+
+{% block content %}
+<div style="margin: 0px auto;" class="col-md-12"> 
+
+<form  method="POST">
+    {% csrf_token %}
+
+    
+    <table   style="margin: 0px auto;" >
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Queue name</th>
+                <th>Customer Code</th>
+                <th>Severity</th>
+            </tr>
+        </thead>
+        <tbody >
+             <a>Queue name:{{queue}}</a>
+              
+               {% for row in rows %}
+                <tr>
+                
+                  <td><input name=name value={{row.name}}></td>
+                  <td><input name=queue value={{queue}}></td>
+                  <td><input name=customer value={{row.customer}}></td>
+                  <td><input name=severity value={{row.severity}}></td>
+
+                </tr>
+             {% endfor %}
+        </tbody>
+       
+    </table>
+<div class="form-group">
+        <button name='save' type="submit" class="btn btn-primary save" value="save" >Save</button>
+    </div>
+</form>
+</div>
+
+{% endblock %}

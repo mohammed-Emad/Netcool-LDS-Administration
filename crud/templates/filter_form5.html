@@ -1,0 +1,65 @@
+{% extends 'form.html' %}
+
+{% block title %}
+Create Filter
+{% endblock %}
+
+{% block subtitle %}
+<div class="sub-header-title">Add New Filter</div>
+    <a href="{% url 'home5' %}" class="btn btn-link btn-sm">Home</a>
+{% endblock %}
+
+{% block form %}
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.errors }}
+
+    {% if rid %}
+       <div class="form-group"> 
+        <p> Add Filter to Device: {{rid}}</p><br/>
+        <a> Please write Device Name: {{rid}}</a><br/>
+        
+        </div>
+    {% endif %}
+    <div class="form-group">
+        <label for="customerCode">Customer Code : </label>
+        {{ form.customerCode }}
+    </div>
+
+    <div class="form-group">
+        <label for="customerCode">Value : </label>
+        {{ form.value }}
+    </div>
+    
+    <div class="form-group">
+        <label for="filterName">Filter Name : </label>
+        {{ form.filterName }}
+    </div>
+
+    <div class="form-group">
+        <label for="filterDesc">Filter Description : </label>
+        {{ form.filterDesc }}
+    </div>
+
+    <div class="form-group">
+        <label for="filterWeight">Filter Weight please (Number Input) : </label>
+        {{ form.filterWeight }}
+    </div>
+
+    <div class="form-group">
+        <label for="subAccount">Queue name : </label>
+        {{ form.subAccount }}
+    </div>
+
+    <div class="form-group">
+        <label for="ticketGroup">Ticket Group : </label>
+        {{ form.ticketGroup }}
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary save">Save</button>
+    </div>
+</form>
+
+{% endblock %}

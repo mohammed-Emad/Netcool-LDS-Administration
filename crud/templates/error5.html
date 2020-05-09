@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}
+error device(s) already exists
+{% endblock %}
+
+{% block subtitle %}
+<div class="sub-header-title">error device(s) already exists</div>
+<div>
+    <a href="{% url 'new_computer5' %}" class="btn btn-link btn-sm">New Device</a>
+     <a href="{% url 'new_filter5' %}" class="btn btn-link btn-sm">New Filter</a>
+     <a href="{% url 'mult_lds5' %}" class="btn btn-link btn-sm">Add Multiple LDSs</a>
+     <a href="{% url 'search5' %}" class="btn btn-link btn-sm">Search Device</a>
+     <a href="{% url 'searchfilter5' %}" class="btn btn-link btn-sm">Search Filter</a>
+     <a href="{% url 'home5' %}" class="btn btn-link btn-sm">Home</a>
+     
+
+     
+</div>
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+
+
+<div class="form-group">  
+
+    <a>hey This device(s) already exists in the database </a>
+    <br \>
+  <div class="form-group">
+        <a href="{% url 'mult_lds5' %}" class="btn btn-primary save">Re Add Multiple LDSs</a>
+        
+    </div>
+    <br \>
+  <div class="form-group">
+        <a href="{% url 'new_computer5' %}" class="btn btn-primary save">Re New Device</a>
+    </div>
+ 
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% load staticfiles %}
+
+{% block title %}
+Register
+{% endblock %}
+
+
+
+
+
+{% block subtitle %}
+<div class="sub-header-title">Register</div>
+
+<div>
+    <a href="{% url 'new_computer' %}" class="btn btn-link btn-sm">New Device</a>
+    <a href="{% url 'new_filter' %}" class="btn btn-link btn-sm">New Filter</a>
+    <a href="{% url 'mult_lds' %}" class="btn btn-link btn-sm">Add Multiple LDSs</a>
+    <a href="{% url 'search' %}" class="btn btn-link btn-sm">Search Device</a>
+    <a href="{% url 'searchfilter' %}" class="btn btn-link btn-sm">Search Filter</a>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="col-md-12">
+      {% if registered %}
+        <h1>Thank you for registering!</h1>
+      {% else %}
+        <h1>Register Here</h1>
+        <h3>Just fill out the form.</h3>
+<form enctype="multipart/form-data" method="POST">
+          {% csrf_token %}
+          {{ user_form.as_p }}
+          {{ profile_form.as_p }}
+          <input type="submit" name="" value="Register">
+        </form>
+        
+      {% endif %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}
+Result Search Filter (Name)
+{% endblock %}
+
+{% block subtitle %}
+<div class="sub-header-title">Search results Filter by (Name)<</div>
+<div>
+    <a href="{% url 'new_computer' %}" class="btn btn-link btn-sm">New Device</a>
+         <a href="{% url 'new_filter' %}" class="btn btn-link btn-sm">New Filter</a>
+    <a href="{% url 'mult_lds' %}" class="btn btn-link btn-sm">Add Multiple LDSs</a>
+     <a href="{% url 'searchfilter' %}" class="btn btn-link btn-sm">Search Filter</a>
+    <a href="{% url 'home' %}" class="btn btn-link btn-sm">Home</a>
+
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="col-md-12">
+    {% if filtersB %}
+   
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+            <tr>
+                <th>Filter Name</th>
+                <th>Queue Name</th>
+                <th>Customer Code</th>
+                 <th>Filter Action</th>
+                
+            </tr>
+        </thead>
+        
+        {% for filterB in filtersB %}
+
+               <tbody>
+                <tr>
+                  <td>{{filterB.filterName}}</td>
+                  <td>{{filterB.subAccount}}</td>
+                  <td>{{filterB.customerCode}}</td>
+                  <td><a href="/update_filter/{{ filterB.filterName }}" class="btn btn-primary btn-sm">Edit</a>
+                  <a href="/delete_filter/{{ filterB.filterName }}" class="btn btn-danger btn-sm confirm-delete">Delete </a>                  
+                  
+                </tr>
+              
+            
+
+        </tbody>
+        {% endfor %}
+        </table>
+       {% else %}
+       <div class="entry-title">
+                  <a " class="btn btn-link btn-sm btn-entry"> <big> No Found Queue: Please Try agine w Other Name </big> </a>
+       </div>
+       {% endif %}
+    
+</div>
+
+{% endblock %}

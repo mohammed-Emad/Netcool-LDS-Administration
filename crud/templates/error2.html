@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}
+error Filter(s) already exists
+{% endblock %}
+
+{% block subtitle %}
+<div class="sub-header-title">error Filter(s) already exists</div>
+<div>
+    <a href="{% url 'new_computer' %}" class="btn btn-link btn-sm">New Device</a>
+     <a href="{% url 'new_filter' %}" class="btn btn-link btn-sm">New Filter</a>
+     <a href="{% url 'mult_lds' %}" class="btn btn-link btn-sm">Add Multiple LDSs</a>
+     <a href="{% url 'search' %}" class="btn btn-link btn-sm">Search Device</a>
+     <a href="{% url 'search' %}" class="btn btn-link btn-sm">Search Filter</a>
+     <a href="{% url 'home' %}" class="btn btn-link btn-sm">Home</a>
+     
+
+     
+</div>
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+
+
+<div class="form-group">  
+
+    <a>hey This Filter(s) already exists in the database </a>
+    <br \>
+  <div class="form-group">
+        <a href="{% url 'new_filter' %}" class="btn btn-primary save">Re Add new filter</a>
+        
+    </div>
+
+ 
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}
+Add Multiple LDSs
+{% endblock %}
+
+{% block subtitle %}
+<div class="sub-header-title">Add Multiple LDSs (device)</div>
+<div>
+     <a href="{% url 'new_computer5' %}" class="btn btn-link btn-sm">New Device</a>
+     <a href="{% url 'new_filter5' %}" class="btn btn-link btn-sm">New Filter</a>
+     <a href="{% url 'search5' %}" class="btn btn-link btn-sm">Search Device</a>
+     <a href="{% url 'searchfilter5' %}" class="btn btn-link btn-sm">Search Filter</a>
+     <a href="{% url 'home5' %}" class="btn btn-link btn-sm">Home</a>
+     
+
+     
+</div>
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+
+
+<div class="form-group">  
+
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    
+    
+    <a>1) Please enter the queue name for these devices:</a>
+    <input type="text" name="queue">
+    <br \>
+    <a>2) Please Upload Your! CSV  :</a>
+    <input type="file" name="myfile">
+    <button type="submit">Upload CSV</button>
+  </form>
+
+  {% if uploaded_file_url %}
+    <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+  {% endif %}
+
+{% endblock %}

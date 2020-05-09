@@ -1,0 +1,48 @@
+{% extends 'form.html' %}
+
+{% block title %}
+Search Filter 
+{% endblock %}
+
+{% block subtitle %}
+<div class="sub-header-title">Searching LDS Filter</div>
+<div>
+    <a href="{% url 'new_computer' %}" class="btn btn-link btn-sm">New Device</a>
+         <a href="{% url 'new_filter' %}" class="btn btn-link btn-sm">New Filter</a>
+    <a href="{% url 'mult_lds' %}" class="btn btn-link btn-sm">Add Multiple LDSs</a>
+     <a href="{% url 'search' %}" class="btn btn-link btn-sm">Search Device</a>
+    <a href="{% url 'home' %}" class="btn btn-link btn-sm">Home</a>
+</div>
+
+{% endblock %}
+<h1>Search Page</h1>
+
+{% block form %}
+
+<form action="{% url 'searchfilter' %}" method="GET" value="{{request.GET.q}}">
+Search <input type="text" name="q" value="{{request.GET.q}}" placeholder="Search Filter"/>
+<br/>
+<input type="checkbox" name="vehicleA" value="subAccount" checked> *search by queue name<br>
+<input type="checkbox" name="vehicleB" value="filterName">Or *search by filtername<br> 
+<input type="submit" name="submit" value="Search Filter"/>
+    {% if submitbutton == 'Search' and request.GET.q != '' %}
+{% if results %}
+<h1>Results for <b>{{ request.GET.q }}</b></h1>
+<br/><br/>
+
+
+{% for result in results %}
+{{result.resourceId}}
+<br/>
+
+
+
+{% endfor %}
+{% else %}
+No search results for this query
+{% endif %}
+{% endif %}
+
+</form>
+
+{% endblock %}

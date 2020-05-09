@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block title %}
+Result Search computers
+{% endblock %}
+
+{% block subtitle %}
+<div class="sub-header-title">Search Device</div>
+<div>
+    <a href="{% url 'new_computer5' %}" class="btn btn-link btn-sm">New Device</a>
+    <a href="{% url 'new_filter5' %}" class="btn btn-link btn-sm">New Filter</a>
+    <a href="{% url 'mult_lds5' %}" class="btn btn-link btn-sm">Add Multiple LDSs</a>
+    <a href="{% url 'search5' %}" class="btn btn-link btn-sm">Search Device</a>
+    <a href="{% url 'searchfilter5' %}" class="btn btn-link btn-sm">Search Filter</a>
+    <a href="{% url 'home5' %}" class="btn btn-link btn-sm">Home</a>
+
+</div>
+{% endblock %}
+
+{% block content %}
+<div style="margin: 0px auto;" class="col-md-12">
+
+    <table style="margin: 0px auto;" class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+            <tr>
+                <th>Device Name</th>
+                <th>Queue Name</th>
+                <th>Customer Code</th>
+                <th>Device Action</th>
+                
+            </tr>
+        </thead>
+        
+        
+        <li class="card">
+        <tbody>
+               {% for computer in computers %}
+                <tr>
+                  <td>{{computer.resourceId}}</td>
+                  <td>{{computer.subAccount}}</td>
+                  <td>{{computer.customerCode}}</td>
+                  <td> None </td>
+                </tr>
+             {% endfor %}
+        </tbody>
+        
+
+        </table>
+    
+</div>
+
+{% endblock %}

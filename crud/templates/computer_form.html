@@ -1,0 +1,43 @@
+{% extends 'form.html' %}
+
+{% block title %}
+Create Computer
+{% endblock %}
+
+{% block subtitle %}
+<div class="sub-header-title">Add New Computer</div>
+    <a href="{% url 'home' %}" class="btn btn-link btn-sm">Home</a>
+{% endblock %}
+
+{% block form %}
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.errors }}
+    <a> {{ error }}</a>
+    <div class="form-group">
+        <label for="resourceId">Resource ID : </label>
+        {{ form.resourceId }}
+    </div>
+
+    <div class="form-group">
+        <label for="subAccount">Queue name : </label>
+        {{ form.subAccount }}
+    </div>
+
+    <div class="form-group">
+        <label for="value">Value : </label>
+        {{ form.value }}
+    </div>
+
+    <div class="form-group">
+        <label for="customerCode">Customer Code : </label>
+        {{ form.customerCode }}
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary save">Save</button>
+    </div>
+</form>
+
+{% endblock %}
